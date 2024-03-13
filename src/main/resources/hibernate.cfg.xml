@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--        Connection parameters-->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tmt</property>
+        <property name="hibernate.connection.username">lucas</property>
+        <property name="hibernate.connection.password">Dantemustdie6</property>
+        <!--        Create tables everytime the project is created-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property>
+        <property name="hibernate.dialect.store_engine">innodb</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="entities.GNP"/>
+        <mapping class="entities.EType"/>
+        <mapping class="entities.IType"/>
+        <mapping class="entities.Network"/>
+    </session-factory>
+</hibernate-configuration>
